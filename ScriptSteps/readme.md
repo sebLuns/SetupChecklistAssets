@@ -22,6 +22,8 @@ At the time of writing, Microsoft has just released a version of Company Portal 
 
 This step opens the Touch ID pane of System Settings to prompt the user to register their fingerprint. The step status will change once it detects that the user has at least one fingerprint registered, and will attempt to close System Settings once the user clicks the Continue button. 
 
+Authenticated Guest Mode on Platform SSO is also taken into account when this step is launched. If JSC detects the current user as one of the `temporary_session` accounts used in AGM, this step will automatically mark itself complete and will skip itself.
+
 *Known Issue: As the `bioutil` utility registers a complete biometric template partially through registration (once the prompt requests the user to register the edges of their fingerprint), it is possible for the user to click "Continue" and register only a part of their fingerprint. This also prevents JSC from closing System Settings as it will not close while the fingerprint registration prompt is open.*
 
 ## script-chrome-login
