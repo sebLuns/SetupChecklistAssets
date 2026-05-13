@@ -17,7 +17,7 @@
 	<true/>
 	<key>buttonScript</key>
 	<string>
-        if [[ $(ps aux | grep $(whoami) | grep -c pseudo) == "1"  &amp;&amp; $(setupchecklist status script-psso) == "suggested" ]]; then
+        if [[ $(ps aux | grep $(whoami) | grep -c JSCeudo) == "1"  &amp;&amp; $(setupchecklist status script-psso) == "suggested" ]]; then
             /path/to/JSCeudo_PSSO.sh &amp;
         fi
     </string>
