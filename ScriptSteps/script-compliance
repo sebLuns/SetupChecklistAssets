@@ -1,8 +1,8 @@
 <dict>
 	<key>title</key>
-	<string>Sign in to OneDrive</string>
+	<string>Register for Device Compliance</string>
 	<key>message</key>
-	<string>OneDrive is used to store all your work related documents. This will sync your Desktop and Documents folder to the cloud.</string>
+	<string>Device Compliance allows your computer to be set with baseline configurations, and allows remediations to occur should the device fall out of compliance.</string>
 	<key>kind</key>
 	<string>script</string>
 	<key>identifier</key>

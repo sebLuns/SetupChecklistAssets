@@ -18,6 +18,12 @@ At the time of writing, Microsoft has just released a version of Company Portal 
 
 *Known Issue: Due to inconsistent reporting via AppleScript, the initial opening of the PSSO prompt may not be detected, and the script may close it to attempt another re-opening. This only seems to happen once-- subsequent openings of the registration window, even when performed for the first time on other accounts, will be detected as intended.*
 
+## script-compliance
+
+This step invokes a request to register your device using the Intune Device Compliance integration. While this is normally run automatically during a post-enrollment PSSO registration, it doesn't always trigger or run properly during Simplified PSSO registration. This step is useful in these instances to verify that the device is properly reporting its compliance status.
+
+ If it detects a successful registration, the dotfile `.compliance` will be added to `/Users/Shared`. This is because this process is bound to a specific user and subsequent users registering their devices may cause duplicate entries to be created in Entra, leading to a lot of clutter. On subsequent runs, if `.compliance` is present, this step will automaticaly mark itself completed and be skipped for other users that log into the device and launch JSC.
+
 ## script-touchid
 
 This step opens the Touch ID pane of System Settings to prompt the user to register their fingerprint. The step status will change once it detects that the user has at least one fingerprint registered, and will attempt to close System Settings once the user clicks the Continue button. 
