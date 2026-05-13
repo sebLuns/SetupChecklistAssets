@@ -1,0 +1,39 @@
+<dict>
+	<key>title</key>
+	<string>Sign in to OneDrive</string>
+	<key>message</key>
+	<string>OneDrive is used to store all your work related documents. This will sync your Desktop and Documents folder to the cloud.</string>
+	<key>kind</key>
+	<string>script</string>
+	<key>identifier</key>
+	<string>script-compliance</string>
+	<key>icon</key>
+	<string>symbol:lock.laptopcomputer</string>
+	<key>buttonLabel</key>
+	<string>Register for Device Compliance</string>
+	<key>windowPosition</key>
+	<string>left</string>
+	<key>openAutomatically</key>
+	<true/>
+	<key>buttonScript</key>
+	<string>
+        if [[ $(/usr/local/jamf/bin/jamfAAD gatherAADInfo) | grep -c "AAD ID acquired") == 1 ]]; then
+            touch /Users/Shared/.compliance
+            killall Safari
+        fi
+    </string>
+	<key>updateStatusScript</key>
+	<string>
+        if [[ -f /Users/Shared/.compliance ]]; then
+            exit 0
+        else
+            exit 1
+        fi
+    </string>
+	<key>prepareScript</key>
+	<string>
+        if [[ -f /Users/Shared/.compliance ]]; then
+            setupchecklist status script-compliance completed
+        fi
+    </string>
+</dict>
