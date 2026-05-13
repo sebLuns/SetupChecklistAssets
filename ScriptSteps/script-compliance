@@ -17,7 +17,7 @@
 	<true/>
 	<key>buttonScript</key>
 	<string>
-        if [[ $(/usr/local/jamf/bin/jamfAAD gatherAADInfo) | grep -c "AAD ID acquired") == 1 ]]; then
+        if [[ $(/usr/local/jamf/bin/jamfAAD gatherAADInfo | grep -c "AAD ID acquired") == 1 ]]; then
             touch /Users/Shared/.compliance
             killall Safari
         fi
