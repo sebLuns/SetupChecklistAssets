@@ -1,6 +1,6 @@
 # Sebastian's JSC Assets
 
-This repository contains a number of Jamf Setup Checklist related resources that I have created or modified to facilitate the onboarding of my endusers, that may be useful to others looking to have a similar onboarding procedure. 
+This repository contains a number of [Jamf Setup Checklist](https://github.com/Jamf-Concepts/setup-checklist) related resources that I have created or modified to facilitate the onboarding of my endusers, that may be useful to others looking to have a similar onboarding procedure. 
 
 Any and all suggestions and changes are welcome! If you find any places things could be improved, or would like to add a new step that others could use, you're more than welcome to!
 
