@@ -2,7 +2,7 @@
 	<key>title</key>
 	<string>Sign in to Google Chrome</string>
 	<key>message</key>
-	<string>Google Chrome is the preferred web browser for Manor ISD. Sign in to begin syncing your district bookmarks and passwords.</string>
+	<string>Google Chrome is the preferred web browser for this organization. Sign in to begin syncing your district bookmarks and passwords.</string>
 	<key>kind</key>
 	<string>script</string>
 	<key>identifier</key>

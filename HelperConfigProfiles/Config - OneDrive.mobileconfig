@@ -129,7 +129,7 @@
 	<key>PayloadDescription</key>
 	<string></string>
 	<key>PayloadDisplayName</key>
-	<string>Microsoft OneDrive - Auto-Sync</string>
+	<string>Config - OneDrive</string>
 	<key>PayloadEnabled</key>
 	<true/>
 	<key>PayloadIdentifier</key>

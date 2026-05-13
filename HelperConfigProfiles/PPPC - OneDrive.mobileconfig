@@ -6,7 +6,7 @@
 	<array>
 		<dict>
 			<key>PayloadDescription</key>
-			<string>PPPC Payload for Microsoft OneDrive</string>
+			<string></string>
 			<key>PayloadDisplayName</key>
 			<string>PRIVACY_PREFERENCES_POLICY_CONTROL</string>
 			<key>PayloadEnabled</key>
@@ -44,7 +44,7 @@
 	<key>PayloadDescription</key>
 	<string></string>
 	<key>PayloadDisplayName</key>
-	<string>PPPC - Microsoft OneDrive</string>
+	<string>PPPC - OneDrive</string>
 	<key>PayloadEnabled</key>
 	<true/>
 	<key>PayloadIdentifier</key>

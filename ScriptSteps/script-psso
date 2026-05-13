@@ -2,7 +2,7 @@
 	<key>title</key>
 	<string>Register for Platform SSO</string>
 	<key>message</key>
-	<string>Platform SSO allows your computer to sync its password to your Manor ISD account, and enables sign-ins across most of our platforms.</string>
+	<string>Platform SSO allows your computer to sync its password to your organizational account, and enables sign-ins across most of our platforms.</string>
 	<key>kind</key>
 	<string>script</string>
 	<key>identifier</key>
@@ -29,4 +29,10 @@
             exit 1
         fi
     </string>
+	<key>prepareScript</key>
+	<string>
+        if [[ $(app-sso platform -s | grep -c "POUserStateNormal") == "1" ]]; then
+            setupchecklist status script-psso completed
+        fi
+    </string> 
 </dict>
