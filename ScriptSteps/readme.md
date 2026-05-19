@@ -26,7 +26,7 @@ This step invokes a request to register your device using the Intune Device Comp
 
  For this script to function properly, Microsoft's [Company Portal for MacOS](https://learn.microsoft.com/en-us/intune/app-management/deployment/add-company-portal-macos#install-company-portal-for-macos-as-a-macos-pkg-app) should be deployed to your computers prior to JSC launching. For devices that should report their compliance but **not** use PSSO, replace `gatherAADInfo` with `registerWithIntune` in the `buttonScript` key.
 
- This step should be run *prior* to setting a default browser to anything but Safari. Other browsers like Google Chrome may open additional windows if they are launched prior to being set up and may leave residual windows open even after closing the Compliance registration window.
+ This step should run completely silent with a proper PSSO registation, but it's possible that it may need to open a web browser to finish registering. In that instance, this step should be run *prior* to setting a default browser to anything but Safari. Other browsers like Google Chrome may open additional windows if they are launched prior to being set up and may leave residual windows open even after closing the Compliance registration window.
 
 ## script-touchid
 
