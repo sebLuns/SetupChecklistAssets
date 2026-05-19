@@ -13,8 +13,6 @@
 	<string>Register for Device Compliance</string>
 	<key>windowPosition</key>
 	<string>left</string>
-	<key>openAutomatically</key>
-	<true/>
 	<key>buttonScript</key>
 	<string>
         if [[ $(/Library/Application\ Support/JAMF/Jamf.app/Contents/MacOS/Jamf\ Conditional\ Access.app/Contents/MacOS/Jamf\ Conditional\ Access gatherAADInfo | grep -c "AAD ID acquired") == 1 ]]; then
