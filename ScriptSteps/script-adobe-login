@@ -1,0 +1,31 @@
+<dict>
+	<key>title</key>
+	<string>Sign in to Adobe Creative Cloud</string>
+	<key>message</key>
+	<string>Adobe Creative Cloud is the application that allows you to download and manage Adobe suite applications such as Photoshop, After Effects, and Premiere Pro. Initial setup may take several minutes to complete.</string>
+	<key>kind</key>
+	<string>script</string>
+	<key>identifier</key>
+	<string>script-adobe-login</string>
+	<key>icon</key>
+	<string>/Applications/Utilities/Adobe Creative Cloud/ACC/Creative Cloud.app</string>
+	<key>buttonLabel</key>
+	<string>Open Adobe Creative Cloud</string>
+	<key>buttonScript</key>
+	<string>
+		open /Applications/Utilities/Adobe\ Creative\ Cloud/ACC/Creative\ Cloud.app
+	</string>
+	<key>activateScript</key>
+	<string>
+        if [[ $(setupchecklist status script-adobe-login) == "suggested" ]]; then
+        	while [[ $(setupchecklist status script-adobe-login) == "suggested" ]]; do
+            	sleep 0.25
+        	done
+        	killall "Creative Cloud"
+        fi
+    </string>
+	<key>updateStatusScript</key>
+	<string>
+    	cat ~/Library/Application\ Support/Adobe/OOBE/com.adobe.acc.onboarding.*.prefs | grep -q "nuj.onboarding.statusLight"
+    </string>
+</dict>

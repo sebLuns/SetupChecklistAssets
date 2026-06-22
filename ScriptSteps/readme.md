@@ -51,3 +51,9 @@ This step is primarily geared towards KFM usage, so it waits until it detects th
 If your organization does not configure KFM, another key like `AccountInfo_Business1.UserEmail` may be used, though many of these keys will populate before setup is actually complete and may provide an adverse effect for users who click "Continue" before setup is finished.
 
 *Known Issue: OneDrive's startup time on first launch is wildly inconsistent, ranging from immediately to up to two minutes before the login window is visible. As this process can usually involve multiple changing menu bar icons and login window decorations, I suspect that this may be due to the "Personal" version of OneDrive launching intially, waiting before another process kicks in to cause it to close and relaunch as the "Enterprise" version. I'm unaware of any command or method to invoke the latter immediately if this is the case.*
+
+## script-adobe-login
+
+This step will open Adobe Creative Cloud and then monitor a configuration profile in the user's library folder for a key that only appears when the Adobe CC app has fully finished onboarding.
+
+Once the key is detected, JSC will automatically close the app until the user is ready to open it again. Additional commands can be placed in the step if browser-based logins are enforced, such as `killall Safari` or `killall "Google Chrome"`.
